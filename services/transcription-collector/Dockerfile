@@ -6,6 +6,7 @@ WORKDIR /app
 
 COPY ./services/transcription-collector/requirements.txt /app/
 COPY ./services/transcription-collector/ /app/
+COPY ./libs/shared-models/shared_models /app/shared_models
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt

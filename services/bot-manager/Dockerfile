@@ -8,6 +8,7 @@ WORKDIR /app
 COPY ./services/bot-manager/requirements.txt /app/
 COPY ./services/bot-manager/*.py /app/
 COPY ./services/bot-manager/app /app/app
+COPY ./libs/shared-models/shared_models /app/shared_models
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt

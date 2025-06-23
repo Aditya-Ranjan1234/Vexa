@@ -7,6 +7,7 @@ WORKDIR /app
 # Copy application code and requirements
 COPY ./services/admin-api/requirements.txt /app/
 COPY ./services/admin-api/app /app/app
+COPY ./libs/shared-models/shared_models /app/shared_models
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
