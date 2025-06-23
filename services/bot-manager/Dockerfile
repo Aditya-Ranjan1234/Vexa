@@ -4,14 +4,8 @@ FROM python:3.10-slim
 # Set working directory
 WORKDIR /app
 
-# Install shared library first
-COPY ./libs/shared-models /app/libs/shared-models
-# Change to a standard pip install
-RUN pip install --no-cache-dir /app/libs/shared-models
-
 # Copy application code and requirements
 COPY ./services/bot-manager/requirements.txt /app/
-# Copy all python files and the app subdirectory
 COPY ./services/bot-manager/*.py /app/
 COPY ./services/bot-manager/app /app/app
 
